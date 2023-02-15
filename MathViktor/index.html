@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task book</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="inf">
+            <div class="workspace hide">
+                <div class="task">
+                    <div class="task__center"></div>
+                </div>
+                <div class="exampls" id="infoExample"></div>
+                <div class="btn_back btn" id="infoBackBtn" ><b>Back</b></div>
+            </div>
+
+            <div class="mathModal">
+                <div class="wrapper" id="category"></div>
+            </div>
+        </div>
+
+        <div class="answer_box hide">
+            <div class="answer_exampl"><br></div>
+            <input class="answer_input" id="infoAnswer"></input>
+            <input class="answer_input_test" id="infoNote"></input>
+            <div class="btn answer_done" id="infoCheckAnswer">Done</div>
+        </div>
+        <div class="back_modal hide">
+            <p></p>
+            <p>Are you sure?</p>
+            <div class="wrapper">
+                <div class="btn_yes btn btn_center">Yes</div>
+                <div class="btn_no btn btn_center">No</div>
+            </div>
+        </div> 
+        
+        <div class="userModal" id="infoUser">
+            <div class="title">Viktor Sakson</div>
+            <div class="wrapper">
+                <div class="user_photo" id="infoPhoto"></div>
+            </div>
+            <span><center><b><h2>You are 0 level</h2></b></center></span>
+            <div class="wrapper" id="infoExp">
+                <div class="exp_range" id="currentExp"></div>
+                <div class="exp_bar">
+                    <div class="exp_bar_filled"></div>
+                </div>
+                <div class="exp_range" id="max"></div>
+            </div>
+            <div id="infoStat">
+                <span><b><h4>Easy : 0</h4></b></></span>
+                <span><b><h4>Hard : 0</h4></b></></span>
+                <span><b><h4>Column : 0</h4></b></></span>
+                <span><b><h4>Equation : 0</h4></b></></span>
+                <span><b><h4>Money : 0</h4></b></></span>
+                <span><b><h4>Time : 0</h4></b></></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="right_answer hide"></div>
+    <div class="blockscreen hide"></div>
+
+    <div class="setting hide">
+        <p><center>Easy</center></p>
+        <div class="wrapper_settings">
+            <div>
+                <label for="easyCount">Examples count<br></label>
+                <select name="easyCount" id="easyCount">
+                    <option value="3">3</option>
+                    <option value="6">6</option>
+                    <option value="9">9</option>
+                    <option value="12">12</option>
+                    <option value="15">15</option>
+                </select>
+            </div>
+            <div>
+                <label for="easyEleMin">Element count<br> from </label>
+                <select name="easyEleMin" id="easyEleMin">
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+                <label for="easyEleMax">to </label>
+                <select name="easyEleMax" id="easyEleMax">
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+            </div>
+        </div>
+        <p><center>Hard</center></p>
+        <div class="wrapper_settings">
+            <div>
+                <label for="hardCount">Examples count<br></label>
+                <select name="hardCount" id="hardCount">
+                    <option value="3">3</option>
+                    <option value="6">6</option>
+                    <option value="9">9</option>
+                    <option value="12">12</option>
+                    <option value="15">15</option>
+                </select>
+            </div>
+            <div>
+                <label for="hardEleMin">Element count<br>from</label>
+                <select name="hardEleMin" id="hardEleMin">
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+                <label for="hardEleMax">to</label>
+                <select name="hardEleMax" id="hardEleMax">
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+            </div>
+        </div>
+        <p><center>Column</center></p>
+        <div class="wrapper_settings">
+            <div>
+                <label for="columnCount">Examples count<br></label>
+                <select name="columnCount" id="columnCount">
+                    <option value="3">3</option>
+                    <option value="6">6</option>
+                    <option value="9">9</option>
+                    <option value="12">12</option>
+                    <option value="15">15</option>
+                </select>
+            </div>
+        </div>
+        <p><center>Equation</center></p>
+        <div class="wrapper_settings">
+            <div>
+                <label for="equationCount">Examples count<br></label>
+                <select name="equationCount" id="equationCount">
+                    <option value="3">3</option>
+                    <option value="6">6</option>
+                    <option value="9">9</option>
+                    <option value="12">12</option>
+                    <option value="15">15</option>
+                </select>
+            </div>
+            <div>
+                <label for="equationEleMin">Element count<br>from</label>
+                <select name="equationEleMin" id="equationEleMin">
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+                <label for="equationEleMax">to</label>
+                <select name="equationEleMax" id="equationEleMax">
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+            </div>
+        </div>
+        <p><center>Money</center></p>
+        <div class="wrapper_settings">
+            <div>
+                <label for="moneyPayMin">Price range<br>from</label>
+                <select name="moneyPayMin" id="moneyPayMin">
+                    <option value="1">1</option>
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                </select>
+                <label for="moneyPayMax">to</label>
+                <select name="moneyPayMax" id="moneyPayMax">
+                    <option value="2">2</option>
+                    <option value="5">5</option>
+                    <option value="50">50</option>
+                </select>
+            </div>
+        </div>
+        <p><center>Time</center></p>
+        <div class="wrapper_settings">
+            <div>
+                <label for="timeTaskCount">Additional task count<br></label>
+                <select name="timeTaskCount" id="timeTaskCount">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+            <div>
+                <label for="time">Show minutes</label><br> 
+                <input type="checkbox" id="timeMinuteAsist">
+            </div>
+            <div>
+                <label for="timeFormat">Time format<br></label>
+                <select name="timeFormat" id="timeFormat">
+                    <option value="12">12 hours</option>
+                    <option value="24">24 hours</option>
+                </select>
+            </div>
+        </div>
+        <center><button class="setings_done">Done</button></center>
+    </div>
+
+
+    <script src="js/settings.js"></script>   
+    <script src="js/cathegories.js"></script>   
+    <script src="js/user.js"></script>   
+    <script src="js/main.js"></script>   
+    <script src="js/info.js"></script>   
+</body>
+</html>
